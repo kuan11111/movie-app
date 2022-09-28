@@ -1,0 +1,35 @@
+nav {
+  margin: 0 1.5rem;
+  padding: 0.5rem 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+a > span,
+.nav-icon {
+  margin: 0 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+a > span:hover {
+  color: red;
+}
+
+.nav-icon {
+  width: 80px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  font-size: 2rem;
+}
+

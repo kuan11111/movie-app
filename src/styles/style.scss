@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+html,
+body,
+#root,
+.App {
+  min-height: 100%;
+}
+
+html {
+  background-color: black;
+}
+
+@import "./nav";
+@import "./homepage";
+@import "./card";
+@import "./movieList";
+@import "./movieDetail";
+
