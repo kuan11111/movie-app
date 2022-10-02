@@ -6,6 +6,10 @@ nav {
   justify-content: space-between;
 }
 
+.nav-title {
+  transition: all 0.35s ease;
+}
+
 .nav-left,
 .nav-right {
   display: flex;
@@ -31,5 +35,39 @@ a > span:hover {
 
 .user-avatar {
   font-size: 2rem;
+}
+
+@media (max-width: "700px") {
+  .nav {
+    margin: 0 1.35rem;
+  }
+  .nav-title {
+    margin-right: 1.15rem;
+    font-size: 1.75rem;
+  }
+  .nav-icon {
+    width: 70px;
+  }
+}
+
+@media (max-width: "420px") {
+  .nav-title {
+    margin: 0.75rem;
+    font-size: 1rem;
+  }
+  .nav-icon {
+    width: 50px;
+  }
+}
+
+@media (max-width: "290px") {
+  .nav-title {
+    margin: 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  .nav-icon {
+    width: 35px;
+  }
 }
 

@@ -17,6 +17,7 @@ const MovieList = () => {
   );
 
   const getData = () => {
+    // setPage(1);
     fetch(
       `https://api.themoviedb.org/3/movie/${
         type ? type : "popular"
@@ -39,6 +40,7 @@ const MovieList = () => {
       .then((response) => response.json())
       .then((data) => {
         //here I'm assuming the returned data is an array of movies
+
         if (page > 1) {
           setMovieList((prevData) => [...prevData, ...data.results]);
         } else {
@@ -47,8 +49,18 @@ const MovieList = () => {
       });
   };
 
+  const handleTypeChange = (type) => {
+    setPage(1);
+    navigate(`/movies/${type}`, { replace: true });
+  };
+
   return (
     <div className="movie__list">
+      <div className="change_type">
+        <button onClick={() => handleTypeChange("popular")}>popular</button>
+        <button onClick={() => handleTypeChange("top_rated")}>top_rated</button>
+        <button onClick={() => handleTypeChange("upcoming")}>upcoming</button>
+      </div>
       <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
       <div className="list__cards">
         {movieList.map((movie) => (
